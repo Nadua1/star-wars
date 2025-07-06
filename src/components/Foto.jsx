@@ -1,10 +1,8 @@
 import React from 'react';
-import friend1 from "../assets/friend1.jpg";
 
 const Foto = ({itemFoto}) => {
     return (
-        <img
-            src={`./assets/${itemFoto}.jpg`} alt={itemFoto}/>
+        <img className="col-sm-4 p-1" src={itemFoto} alt="Friend"/>
     );
 };
 
