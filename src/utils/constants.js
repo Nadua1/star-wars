@@ -20,3 +20,5 @@ export const openingCrawl = `It is a period of civil war.
                 stolen plans that can save her
                 people and restore
                 freedom to the galaxy....`
+
+export const itemsFoto=['friend1', 'friend2', 'friend3', 'friend4', 'friend5', 'friend6', 'friend7', 'friend8', 'friend9'];

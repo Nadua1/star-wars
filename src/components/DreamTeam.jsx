@@ -13,7 +13,7 @@ const DreamTeam = () => {
     return (
         <section className="float-end row w-50 border rounded-bottom-4 me-0 ms-2">
             <h2 className="text-center">Dream Team</h2>
-            <img className="col-sm-4 p-1" src={friend1} alt="Friend"/>
+            <Foto itemFoto='friend1'/>
             <img className="col-sm-4 p-1" src={friend2} alt="Friend"/>
             <img className="col-sm-4 p-1" src={friend3} alt="Friend"/>
             <img className="col-sm-4 p-1" src={friend4} alt="Friend"/>
