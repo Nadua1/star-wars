@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Foto from "./Foto.jsx";
 import {itemsFoto} from "../utils/constants.js";
 
 const DreamTeam = () => {
