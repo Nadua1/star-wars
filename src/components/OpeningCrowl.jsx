@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from "react";
 import {base_url} from "../utils/constants.js";
 
 const OpeningCrawl = () => {
-    const [openingCrawl, setOpeningCrawl] = useState('');
+    const [openingCrawl, setOpeningCrawl] = useState();
 
     useEffect(() => {
         const opening_crawl = sessionStorage.getItem('opening_crawl');
@@ -17,7 +17,6 @@ const OpeningCrawl = () => {
                     sessionStorage.setItem('opening_crawl', data.opening_crawl);
                 });
         }
-
     }, [])
 
     if (openingCrawl) {
@@ -26,11 +25,14 @@ const OpeningCrawl = () => {
         );
     } else {
         return (
-            <p className={"farGalaxy"}>
-                <span className=" spinner-border spinner-border-sm"></span>Loading...
-            </p>)
+            <p className={'farGalaxy'}>
+                <span className="spinner-border spinner-border-sm"></span>
+                Loading...
+            </p>
+        );
     }
 
-};
+
+}
 
 export default OpeningCrawl;

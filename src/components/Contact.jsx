@@ -1,14 +1,28 @@
 import '../Contact.css'
 import {useEffect, useState} from "react";
-import {base_url} from "../utils/constants.js";
+import {base_url, period_month} from "../utils/constants.js";
 
 const Contact = () => {
     const [planets, setPlanets] = useState(['wait...']);
 
+    async function getPlanets() {
+        const res = await fetch(`${base_url}/v1/planets`);
+        const data = await res.json();
+        const planets = data.map(item => item.name);
+        setPlanets(planets);
+        localStorage.setItem('planets', JSON.stringify({
+            payload: planets,
+            time: Date.now()
+        }));
+    }
+
     useEffect(() => {
-        fetch(`${base_url}/v1/planets`)
-            .then(res => res.json())
-            .then(data => setPlanets(data.map(item => item.name)));
+        const planets = JSON.parse(localStorage.getItem('planets'));
+        if (planets && ((Date.now() - planets.time) < period_month)) {
+            setPlanets(planets.payload);
+        } else {
+            getPlanets().then(() => console.log('Planets were loaded'));
+        }
     }, [])
 
     return (
