@@ -1,4 +1,4 @@
-import '../Contact.css'
+import '../contact.css'
 import {useEffect, useState} from "react";
 import {base_url, period_month} from "../utils/constants.js";
 

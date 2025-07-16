@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import Home from "./Home.jsx";
-import {navItems} from "../utils/constants.js";
+import {navItems, StarWarsContext} from "../utils/constants.js";
 import StarWars from "./StarWars.jsx";
 import AboutMe from "./AboutMe.jsx";
 import Contact from "./Contact.jsx";
 
 
-const Main = ({page}) => {
+const Main = () => {
+    const{page} = useContext(StarWarsContext);
 
     switch (page) {
         case navItems[1]:
