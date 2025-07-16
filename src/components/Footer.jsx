@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
-        <footer className="py-4 rounded-bottom-4 row m-0">
-            <div className="btn btn-danger col-sm-2 offset-sm-2">Send me an <span
-                className="text-dark text-uppercase">email</span></div>
+        <footer className="pt-8 rounded-t-3xl bg-grey-color  ">
+            <div className="bg-red-color border-black border-2 rounded-md px-3 py-2 cursor-pointer hover:bg-red-500 hover:text-white w-fit ml-8 mb-4">Send me an <span
+                className="uppercase">email</span></div>
         </footer>
     );
 };
