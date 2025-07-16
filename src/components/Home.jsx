@@ -5,7 +5,7 @@ import OpeningCrowl from "./OpeningCrowl.jsx";
 
 const Home = () => {
     return (
-        <main className="clearfix">
+        <main className="clear-both">
             <Hero/>
             <DreamTeam/>
             <OpeningCrowl/>
